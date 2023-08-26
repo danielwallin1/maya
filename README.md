@@ -14,13 +14,12 @@ Page "home" with multiple components together with CSS file for each component.
 - "Show more" button
 
 ## Screenshots
-![desktop view](./images/desktop1.png)
-![desktop view](./images/desktop2.png)
-![desktop view](./images/desktop3.png)
-![mobile view](./images/mobile1.png)
-![mobile view](./images/mobile2.png)
-![mobile view](./images/mobile3.png)
-![mobile view](./images/mobile4.png)
-![sanity view](./images/sanity1.png)
-![sanity view](./images/sanity2.png)
-![sanity view](./images/sanity3.png)
+![desktop view](./images/desktop-1.png)
+![desktop view](./images/desktop-2.png)
+![desktop view](./images/desktop-3.png)
+![mobile view](./images/mobile-1.png)
+![mobile view](./images/mobile-2.png)
+![mobile view](./images/mobile-3.png)
+![mobile view](./images/mobile-4.png)
+![sanity view](./images/sanity-1.png)
+![sanity view](./images/sanity-2.png)
