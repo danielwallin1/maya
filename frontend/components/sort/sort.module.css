@@ -27,7 +27,7 @@
   display: flex;
   justify-content: left;
   font-size: 30px;
-  color: #777;
+  color: #333;
 
   @media screen and (min-width: 600px) {
     font-size: 16px;
@@ -44,7 +44,7 @@
 }
 
 .sort-type {
-  border: 1px solid #000;
+  border: 1px solid #333;
   padding: 3px 5px 0 5px;
   margin: 0 0 0 8px;
 }

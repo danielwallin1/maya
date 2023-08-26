@@ -8,7 +8,7 @@ interface PreambleProps {
   }
 }
 
-const Preamble: React.FC<PreambleProps> = ({ preamble }) => {
+const Preamble = ({ preamble }:PreambleProps) => {
     const { title, description, mission } = preamble;
 
     return (

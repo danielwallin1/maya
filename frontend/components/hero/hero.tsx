@@ -11,13 +11,16 @@ interface HeroProps {
   }
 }
 
-const Hero: React.FC<HeroProps> = ({ hero }) => {
-
+const Hero = ({ hero }:HeroProps) => {
   function urlFor (source:object) {
     return imageUrlBuilder(client).image(source)
   }
 
-  const image = urlFor(hero.mainImage).width(690).height(400).fit('max').auto('format');
+  const image = urlFor(hero.mainImage)
+    .width(690)
+    .height(400)
+    .fit('max')
+    .auto('format');
 
   return (
     <div className={styles.hero} style={{ backgroundImage: `url(${image})` }}>

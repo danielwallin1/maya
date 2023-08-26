@@ -21,7 +21,7 @@ interface ComponentProps {
   },
 }
 
-const Home: React.FC<ComponentProps> = ({ hero, preamble, products }) => {
+const Home = ({ hero, preamble, products }:ComponentProps) => {
   return (
     <div className={styles["component-wrapper"]}>
       <Header />

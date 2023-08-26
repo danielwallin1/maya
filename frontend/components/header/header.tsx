@@ -1,16 +1,16 @@
+import Link from 'next/link'
 import styles from './header.module.css'
 
-const Header: React.FC = ({}) => {  
-  return (
+const Header = () => ( 
     <div className={styles.header}>
       <p className={styles.branding}>Maya</p>
-      <nav className={styles["main-navigation"]}>
+      <nav className={styles["main-nav"]}>
         <div className={styles["desktop-nav"]}>
-          <div className={styles["nav-item"]}>Man</div>
-          <div className={styles["nav-item"]}>Woman</div>
-          <div className={styles["nav-item"]}>Products</div>
-          <div className={styles["nav-item"]}>About us</div>
-          <div className={styles["nav-item"]}>Blog</div>
+          <Link className={styles["nav-item"]} href="#" title={"Man"}>Man</Link>
+          <Link className={styles["nav-item"]} href="#" title={"Woman"}>Woman</Link>
+          <Link className={styles["nav-item"]} href="#" title={"Products"}>Products</Link>
+          <Link className={styles["nav-item"]} href="#" title={"About us"}>About us</Link>
+          <Link className={styles["nav-item"]} href="#" title={"Blog"}> Blog </Link>
         </div>
         <div className={styles["mobile-nav"]}>  
           <span></span>
@@ -19,9 +19,6 @@ const Header: React.FC = ({}) => {
         </div>
       </nav>
     </div>
-
-  )
-  
-};
+  );
 
 export default Header

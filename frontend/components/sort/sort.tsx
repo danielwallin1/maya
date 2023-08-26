@@ -1,7 +1,6 @@
 import styles from './sort.module.css'
 
-const Sort: React.FC = () => {
-  return (
+const Sort = () => (
     <div className={styles.sort}>
       <div className={styles["settings"]}>
         <p className={styles["product-title"]}>Featured products</p>
@@ -12,7 +11,6 @@ const Sort: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+);
 
 export default Sort;
