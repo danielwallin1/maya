@@ -5,6 +5,7 @@ Product page in Nextjs connected to Sanity CMS, with responsive design.
 - Nextjs
 - CSS modules
 - Sanity
+- Groq
 
 ## Implementation
 Page "home" with multiple components together with CSS file for each component.
