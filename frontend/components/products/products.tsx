@@ -1,10 +1,15 @@
 import { useState } from "react";
 import client from '../../client';
 import imageUrlBuilder from '@sanity/image-url';
+import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
 import styles from './products.module.css'
 
 interface ProductProps {
   products: Array<object>
+}
+
+interface ImageProps extends Omit<React.HTMLProps<HTMLImageElement>, 'src'> {
+  src: string | ImageUrlBuilder;
 }
 
 const Products = ({ products }:ProductProps) => {
@@ -14,7 +19,7 @@ const Products = ({ products }:ProductProps) => {
     setLoadMore(loadMore + productsShown);
   };
 
-  function urlFor (source:object) {
+  function urlFor(source:ImageProps) {
     return imageUrlBuilder(client).image(source)
   }
 
@@ -40,6 +45,7 @@ const Products = ({ products }:ProductProps) => {
                       .height(240)
                       .fit('max')
                       .auto('format')
+                      .url()
                     }
                   />
                 </div>
