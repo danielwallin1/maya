@@ -5,18 +5,16 @@ import Home from './home/home';
 interface InitialProps {
   products: Array<object>,
   hero:any,
-  preamble:any
+  intro:any
 }
-const Index = ({ products, hero, preamble }:InitialProps) => {
-    return (
-      <div>
-        <Home
-          products={products}
-          hero={hero}
-          preamble={preamble} />
-      </div>
-    )
-}
+const Index = ({ products, hero, intro }:InitialProps) => (
+    <div>
+      <Home
+        products={products}
+        hero={hero}
+        intro={intro} />
+    </div>
+  );
 
 export async function getStaticProps() {
   const products = await client.fetch(groq`
@@ -25,7 +23,7 @@ export async function getStaticProps() {
   const hero = await client.fetch(groq`
     *[_type == "hero"][0]
   `)
-  const preamble = await client.fetch(groq`
+  const intro = await client.fetch(groq`
     *[_type == "preamble"][0]
   `)
 
@@ -33,7 +31,7 @@ export async function getStaticProps() {
     props: {
       products,
       hero,
-      preamble
+      intro
     }
   }
 }

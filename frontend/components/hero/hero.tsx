@@ -27,8 +27,8 @@ const Hero = ({ hero }:HeroProps) => {
       <div className={styles.wrapper}>
         <div className={styles.content}>
           <p className={styles.tag}>{hero.tag}</p>
-          <h1 className={styles.title}>{hero.title}</h1>
-          <p className={styles.description}>{hero.description}</p>
+          <h1 className={styles.heading}>{hero.title}</h1>
+          <p className={styles.text}>{hero.description}</p>
         </div>
       </div>
     </div>

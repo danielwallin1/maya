@@ -1,6 +1,6 @@
 import Header from '../../components/header/header';
 import Hero from '../../components/hero/hero';
-import Preamble from '../../components/preamble/preamble';
+import Intro from '../../components/intro/intro';
 import Sort from '../../components/sort/sort';
 import Products from '../../components/products/products';
 import Footer from '../../components/footer/footer';
@@ -14,26 +14,24 @@ interface ComponentProps {
     description: string,
     title: string
   },
-  preamble: {
+  intro: {
     title: string,
     description: string,
     mission: string
   },
 }
 
-const Home = ({ hero, preamble, products }:ComponentProps) => {
-  return (
-    <div className={styles["component-wrapper"]}>
-      <Header />
-      <Hero hero={hero} />
-      <div className={styles["content-wrapper"]}>
-        <Preamble preamble={preamble} />
-        <Sort />
-        <Products products={products} />
-      </div>
-      <Footer />
+const Home = ({ hero, intro, products }:ComponentProps) => (
+  <div className={styles["component-wrapper"]}>
+    <Header />
+    <Hero hero={hero} />
+    <div className={styles["content-wrapper"]}>
+      <Intro intro={intro} />
+      <Sort />
+      <Products products={products} />
     </div>
-  )
-}
+    <Footer />
+  </div>
+);
 
 export default Home;
