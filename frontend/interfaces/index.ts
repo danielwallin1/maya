@@ -5,7 +5,7 @@ export interface _Products {
 export interface _Hero {
   title: string,
   description: string,
-  mainImage: ImageBitmap,
+  mainImage: {},
   tag: string
 }
 
