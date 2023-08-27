@@ -1,14 +1,11 @@
+import { _Intro } from "../../interfaces";
 import styles from './intro.module.css'
 
-interface IntroProps {
-  intro: {
-    title: string,
-    description: string,
-    mission: string
-  }
+interface Props {
+  intro: _Intro
 }
 
-const Intro = ({ intro }:IntroProps) => (
+const Intro = ({ intro }:Props) => (
   <div className={styles.content}>
   <p className={styles.heading}>{intro.title}</p>
   <div className={styles.wrapper}>

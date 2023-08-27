@@ -1,3 +1,4 @@
+import { _Products, _Hero, _Intro } from "../../interfaces";
 import Header from '../../components/header/header';
 import Hero from '../../components/hero/hero';
 import Intro from '../../components/intro/intro';
@@ -6,22 +7,13 @@ import Products from '../../components/products/products';
 import Footer from '../../components/footer/footer';
 import styles from './home.module.css';
 
-interface ComponentProps {
-  products: Array<object>,
-  hero: {
-    mainImage: object,
-    tag: string,
-    description: string,
-    title: string
-  },
-  intro: {
-    title: string,
-    description: string,
-    mission: string
-  },
+interface Props {
+  products: _Products[],
+  hero: _Hero,
+  intro: _Intro
 }
 
-const Home = ({ hero, intro, products }:ComponentProps) => (
+const Home = ({ hero, intro, products }:Props) => (
   <div className={styles["component-wrapper"]}>
     <Header />
     <Hero hero={hero} />

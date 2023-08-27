@@ -2,22 +2,21 @@ import { useState } from "react";
 import client from '../../client';
 import imageUrlBuilder from '@sanity/image-url';
 import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
+import { _Products } from "../../interfaces";
 import styles from './products.module.css'
 
-interface ProductProps {
-  products: Array<object>
+interface Props {
+  products: _Products[]
 }
 
 interface ImageProps extends Omit<React.HTMLProps<HTMLImageElement>, 'src'> {
   src: string | ImageUrlBuilder;
 }
 
-const Products = ({ products }:ProductProps) => {
+const Products = ({ products }:Props) => {
   const productsShown = 6;
   const [loadMore, setLoadMore] = useState(productsShown);
-  const showMoreProducts = () => {
-    setLoadMore(loadMore + productsShown);
-  };
+  const showMoreProducts = () => setLoadMore(loadMore + productsShown);
 
   function urlFor(source:ImageProps) {
     return imageUrlBuilder(client).image(source)

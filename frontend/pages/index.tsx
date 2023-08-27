@@ -1,13 +1,15 @@
+import { _Products, _Hero, _Intro } from "../interfaces";
 import groq from 'groq';
 import client from '../client';
 import Home from './home/home';
 
-interface InitialProps {
-  products: Array<object>,
-  hero:any,
-  intro:any
+interface Props {
+  products: _Products[],
+  hero: _Hero,
+  intro: _Intro
 }
-const Index = ({ products, hero, intro }:InitialProps) => (
+
+const Index = ({ products, hero, intro }:Props) => (
     <div>
       <Home
         products={products}

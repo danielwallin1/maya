@@ -1,17 +1,13 @@
 import client from '../../client';
 import imageUrlBuilder from '@sanity/image-url';
+import { _Hero } from "../../interfaces";
 import styles from './hero.module.css'
 
-interface HeroProps {
-  hero: {
-    mainImage:object,
-    tag:string,
-    description:string,
-    title:string
-  }
+interface Props {
+  hero: _Hero
 }
 
-const Hero = ({ hero }:HeroProps) => {
+const Hero = ({ hero }:Props) => {  
   function urlFor (source:object) {
     return imageUrlBuilder(client).image(source)
   }
