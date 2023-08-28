@@ -7,12 +7,12 @@ interface Props {
 
 const Intro = ({ intro }:Props) => (
   <div className={styles.content}>
-  <p className={styles.heading}>{intro.title}</p>
-  <div className={styles.wrapper}>
-    <p className={styles.description}>{intro.description}</p>
-    <p className={styles.mission}>{intro.mission}</p>
+    <p className={styles.heading}>{intro.heading}</p>
+    <div className={styles.wrapper}>
+      <p className={styles.description}>{intro.description}</p>
+      <p className={styles.mission}>{intro.mission}</p>
+    </div>
   </div>
-  </div>
-);
+)
 
 export default Intro;

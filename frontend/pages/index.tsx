@@ -1,6 +1,5 @@
-import { _Products, _Hero, _Intro } from "../interfaces";
-import groq from 'groq';
-import client from '../client';
+import { _Products, _Hero, _Intro } from '../interfaces';
+import loadData from '../api/api';
 import Home from './home/home';
 
 interface Props {
@@ -10,24 +9,18 @@ interface Props {
 }
 
 const Index = ({ products, hero, intro }:Props) => (
-    <div>
-      <Home
-        products={products}
-        hero={hero}
-        intro={intro} />
-    </div>
-  );
+  <div>
+    <Home
+      products={products}
+      hero={hero}
+      intro={intro} />
+  </div>
+);
 
 export async function getStaticProps() {
-  const products = await client.fetch(groq`
-    *[_type == "product"]
-  `);
-  const hero = await client.fetch(groq`
-    *[_type == "hero"][0]
-  `)
-  const intro = await client.fetch(groq`
-    *[_type == "preamble"][0]
-  `)
+  const products = await loadData(`*[_type == "product"]`);
+  const hero = await loadData(`*[_type == "hero"][0]`);
+  const intro = await loadData(`*[_type == "intro"][0]`);
 
   return {
     props: {

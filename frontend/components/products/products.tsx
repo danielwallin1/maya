@@ -28,7 +28,7 @@ const Products = ({ products }:Props) => {
         {products.length > 0 && products.slice(0, loadMore).map(
           (product:any) => {
 
-            const labelClass = product.label == "Recycled polyamide"
+            const labelClass = product.label == "RECYCLED POLYAMIDE"
               ? "label-recycled" : "label-new";
 
             return (
@@ -39,7 +39,7 @@ const Products = ({ products }:Props) => {
                     className={styles["product-image"]}
                     loading="lazy"
                     src={
-                      urlFor(product.mainImage)
+                      urlFor(product.image)
                       .width(320)
                       .height(240)
                       .fit('max')
@@ -50,8 +50,8 @@ const Products = ({ products }:Props) => {
                 </div>
                 <div className={styles["price-wrapper"]}>
                   <div className={styles["title-wrapper"]}>
-                    <p className={styles.title}>{product.title}</p>
-                    <p className={styles.description}>{product.description}</p>
+                    <p className={styles.title}>{product.name}</p>
+                    <p className={styles.description}>{product.text}</p>
                   </div>
                   <p className={styles.price}>{product.price}</p>
                 </div>

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineField, defineType} from 'sanity';
 
 export default defineType({
   name: 'hero',
@@ -6,39 +6,27 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'heading',
+      title: 'Heading',
       type: 'string',
     }),
     defineField({
-      name: 'tag',
-      title: 'Tag',
+      name: 'tagline',
+      title: 'Tagline',
       type: 'string'
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'image',
+      title: 'Image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
+      name: 'text',
+      title: 'Text',
       type: 'string',
     }),
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
 })

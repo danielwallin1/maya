@@ -51,5 +51,10 @@
 
 .mission {
   color: #555;
+
+  @media screen and (min-width: 600px) {
+   margin-bottom: 0;
+  }
+
 }
 

@@ -3,14 +3,14 @@ export interface _Products {
 }
 
 export interface _Hero {
-  title: string,
-  description: string,
-  mainImage: {},
-  tag: string
+  heading: string,
+  text: string,
+  image: {},
+  tagline: string
 }
 
 export interface _Intro {
-  title: string,
+  heading: string,
   description: string,
   mission: string
 }
