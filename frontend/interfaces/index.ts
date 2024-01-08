@@ -12,5 +12,6 @@ export interface _Hero {
 export interface _Intro {
   heading: string,
   description: string,
-  mission: string
+  mission: string,
+  image: any,
 }
