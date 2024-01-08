@@ -19,6 +19,11 @@ export default defineType({
       name: 'mission',
       title: 'Mission',
       type: 'string'
-    })
+    }),
+    defineField({
+      name: 'image',
+      title: 'About image',
+      type: 'image'
+    }),
   ]
 })

@@ -15,6 +15,10 @@
   }
 }
 
+.intro-image {
+  width: 100%;
+}
+
 .content:after {
   content: '';
   position: absolute;

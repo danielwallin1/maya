@@ -12,13 +12,15 @@ const Hero = ({ hero }:Props) => {
     return imageUrlBuilder(client).image(source)
   }
 
-  const image = urlFor(hero.image)
+  const image = urlFor(hero?.image)
     .width(690)
     .height(400)
     .fit('max')
     .auto('format');
 
   return (
+    <>
+    {hero &&
     <div className={styles.hero} style={{ backgroundImage: `url(${image})` }}>
       <div className={styles.wrapper}>
         <div className={styles.content}>
@@ -28,6 +30,8 @@ const Hero = ({ hero }:Props) => {
         </div>
       </div>
     </div>
+    }
+  </>
   )
 }
 
