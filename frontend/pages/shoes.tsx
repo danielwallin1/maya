@@ -1,5 +1,4 @@
 import { _Products, _Hero, _Intro } from "../interfaces";
-import Hero from '../components/hero/hero';
 import Page from '../components/page';
 import Sort from '../components/sort/sort';
 import { motion } from 'framer-motion';

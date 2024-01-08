@@ -1,6 +1,6 @@
 import { _Products, _Hero, _Intro } from "../../../interfaces";
 import Page from '../../../components/page';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import client from '../../../client';
 import Hero from '../../../components/hero/hero';
 import imageUrlBuilder from '@sanity/image-url';
@@ -9,7 +9,7 @@ import styles from '../../shoes.module.css';
 import loadData from '../../../api/api';
 
 interface Props {
-  product: object;
+  product: any;
   hero: _Hero;
 }
 
@@ -39,7 +39,7 @@ const Product = ({ product, hero }:Props) => {
   }
 
   return (
-    <Page>
+    <Page hero={hero}>
         {product && hero && 
           <div className={styles["component-wrapper"]}>
             <Hero hero={hero} />
@@ -98,7 +98,7 @@ export const getStaticPaths = (async () => {
   }
 })
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context:any) {
   const product = await loadData(`*[_type == "${context.params.category}" && _id == "${context.params.id}"][0]`);
   const hero = await loadData(`*[_type == "hero"][0]`);
     
